@@ -43,7 +43,7 @@ export default function ContactPage() {
           name: formData.name,
           title: formData.subject,
           message: formData.message,
-          email: "govindbhatter@gmail.com",
+          email: formData.email,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
