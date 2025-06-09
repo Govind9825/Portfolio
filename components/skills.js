@@ -85,7 +85,7 @@ export default function SkillsPage() {
               My <span className="text-[#ff3f81]">Skills</span> & <span className="text-[#ff3f81]">Technologies</span>
             </h2>
             <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto">
-              Here's a comprehensive overview of the technologies I work with and my proficiency levels in each area.
+              Here&apos;s a comprehensive overview of the technologies I work with and my proficiency levels in each area.
             </p>
           </motion.div>
           

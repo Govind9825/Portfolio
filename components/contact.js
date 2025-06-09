@@ -97,7 +97,7 @@ export default function ContactPage() {
             {/* Status Messages */}
             {submitStatus === "success" && (
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300">
-                ✅ Message sent successfully! I'll get back to you soon.
+                ✅ Message sent successfully! I&apos;ll get back to you soon.
               </div>
             )}
             {submitStatus === "error" && (
@@ -279,7 +279,7 @@ export default function ContactPage() {
               className="mt-6 rounded-xl overflow-hidden border-2 border-white/10 relative h-48 text-center"
             >
               <div className="absolute inset-0 text-2xl flex items-center justify-center text-white">
-                "Let's build something amazing together."
+                &quot;Let&apos;s build something amazing together.&quot;
               </div>
             </motion.div>
           </motion.div>

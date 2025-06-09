@@ -38,7 +38,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-white/80 text-base sm:text-lg md:text-xl"
             >
-              I'm a passionate full-stack developer with a strong foundation in
+              I&apos;m a passionate full-stack developer with a strong foundation in
               the MERN stack and a growing interest in Artificial Intelligence,
               Machine Learning, and Deep Learning.
             </motion.p>

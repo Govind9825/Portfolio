@@ -53,10 +53,10 @@ export default function HeroCard() {
             </h2>
 
             <p className="text-white/80 mb-6 md:mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
-              "MERN Stack Developer with a strong passion for AI, Machine
+              &quot;MERN Stack Developer with a strong passion for AI, Machine
               Learning, and Deep Learning — building intelligent and scalable
               web applications that blend data-driven insights with modern
-              UI/UX."
+              UI/UX.&quot;
             </p>
 
             <div className="flex gap-4 md:gap-6 mb-6 md:mb-8">

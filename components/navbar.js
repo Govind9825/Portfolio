@@ -163,7 +163,7 @@ export default function Navbar() {
         {/* Social Links or Additional Info (Optional) */}
         <div className="absolute bottom-8 left-6 right-6">
           <p className="text-white/60 text-sm text-center">
-            Let's build something amazing together
+            Let&apos;s build something amazing together
           </p>
         </div>
       </div>
