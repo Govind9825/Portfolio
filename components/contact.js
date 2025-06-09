@@ -41,9 +41,9 @@ export default function ContactPage() {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE2_ID,
         {
           name: formData.name,
+          email: formData.email,
           title: formData.subject,
           message: formData.message,
-          email: formData.email,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
