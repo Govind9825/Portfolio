@@ -17,7 +17,7 @@ const projects = [
     description: "A real-time video streaming website with synchronized playback across clients using socket communication.",
     tags: ["Next.js", "Tailwind CSS", "Socket.io", "Azure", "Framer Motion"],
     image: "/p2.jpg",
-    liveLink: "https://github.com/Govind9825/CINEFY",
+    liveLink: "https://cinefy-1d0m.onrender.com/",
     codeLink: "https://github.com/Govind9825/CINEFY"
   },
   {

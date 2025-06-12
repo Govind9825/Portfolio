@@ -26,7 +26,7 @@ const skillsData = [
     icon: <FaServer className="text-2xl text-[#ff3f81]" />,
     technologies: [
       { name: "Node.js", icon: <SiNodedotjs className="text-green-600" />, proficiency: "Advanced" },
-      { name: "Express", icon: <SiExpress className="text-gray-300" />, proficiency: "Interediate" },
+      { name: "Express", icon: <SiExpress className="text-gray-300" />, proficiency: "Intermediate" },
       { name: "Python", icon: <SiPython className="text-blue-400" />, proficiency: "Advanced" }
     ]
   },
