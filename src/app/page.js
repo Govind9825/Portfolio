@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar";
 import HeroCard from "../../components/hero";
 import AboutPage from "../../components/about";
 import ProjectsPage from "../../components/projects";
+import CertificatesPage from "../../components/certificates";
 import ExperiencesPage from "../../components/experience";
 import ContactPage from "../../components/contact";
 import SkillsPage from "../../components/skills";
@@ -73,6 +74,7 @@ export default function Home() {
             <div id="about"><AboutPage /></div>
             <div id="skills"><SkillsPage /></div>
             <div id="projects"><ProjectsPage /></div>
+            <div id="certificates"><CertificatesPage /></div>
             <div id="experiences"><ExperiencesPage /></div>
             <div id="contact"><ContactPage /></div>
             <Footer/>

@@ -13,8 +13,8 @@ export default function AboutPage() {
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-xl overflow-hidden border-2 border-white/20">
               <Image
-                src="/portfolio-about.jpg"
-                alt="Your Photo"
+                src="/portfolio-profile.jpg"
+                alt="Govind Bhatter"
                 fill
                 className="object-cover"
                 priority

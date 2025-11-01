@@ -9,11 +9,53 @@ import {
   FaKaggle,
   FaDownload,
 } from "react-icons/fa";
-import { useEffect, useRef } from "react";
-import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function HeroCard() {
   const borderRef = useRef(null);
+  const [displayedText, setDisplayedText] = useState("");
+  const texts = [
+    " Full Stack Developer",
+    " Data Analyst",
+    " AI-ML Enthusiast"
+  ];
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = texts[currentTextIndex];
+    
+    if (!currentText) return;
+
+    // Handle pause after typing completes
+    if (!isDeleting && charIndex === currentText.length) {
+      const pauseTimer = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2000);
+      return () => clearTimeout(pauseTimer);
+    }
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && charIndex < currentText.length) {
+        // Typing forward
+        setDisplayedText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      } else if (isDeleting && charIndex > 0) {
+        // Deleting backward
+        setDisplayedText(currentText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      } else if (isDeleting && charIndex === 0) {
+        // Finished deleting, move to next text
+        setIsDeleting(false);
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        setCharIndex(0);
+      }
+    }, isDeleting ? 50 : 100); // Faster when deleting
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, currentTextIndex, texts]);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -48,8 +90,10 @@ export default function HeroCard() {
               Govind Bhatter
             </h1>
 
-            <h2 className="text-lg sm:text-xl md:text-2xl text-[#ff3f81] mb-4">
-              MERN Stack Developer | AI-ML Enthusiast
+            <h2 className="text-lg sm:text-xl md:text-2xl text-[#ff3f81] mb-4 min-h-[2rem] flex items-center">
+              <span className="text-white">I am a&nbsp;</span>
+              <span>{displayedText}</span>
+              <span className="animate-pulse ml-1">|</span>
             </h2>
 
             <p className="text-white/80 mb-6 md:mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
@@ -95,21 +139,21 @@ export default function HeroCard() {
             </button>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Lottie Animation */}
           <div className="flex items-center justify-center order-1 lg:order-2">
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl">
-              <Image
-                src="/portfolio-profile.jpg"
-                alt="Govind Bhatter"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 288px, (max-width: 1280px) 384px, 448px"
+            {/* <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl bg-gradient-to-br from-[#ff3f81]/10 to-cyan-500/10"> */}
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem]">
+              <DotLottieReact
+                src={encodeURI("/space boy developer.lottie")}
+                loop
+                autoplay
+                className="w-full h-full"
               />
               
               {/* Gradient overlay for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" /> */}
             </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
