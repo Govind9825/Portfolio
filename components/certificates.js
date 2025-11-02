@@ -19,8 +19,17 @@ const certificates = [
     image: "/nvidia_dl.jpg",
     viewLink: "https://drive.google.com/file/d/1gWLTxtdRiGBVAp5HhBvMc3n5leooQZCD/view?usp=drive_link",
     issuer: "NVIDIA"
+  },
+  {
+    title: "OCI Certified Data Science Professional",
+    description: "Comprehensive certification in data science, covering data analytics, machine learning, and cloud-based AI solutions using Oracle Cloud Infrastructure.",
+    tags: ["Data Science", "Oracle Cloud", "Machine Learning", "AI", "Data Analytics"],
+    image: "/oci_ds.jpg",
+    viewLink: "https://drive.google.com/file/d/1Mi7plLR-uDwDgdoEBBfv6VQsM0bPgNEv/view?usp=sharing",
+    issuer: "Oracle"
   }
 ];
+
 
 
 export default function CertificatesPage() {
